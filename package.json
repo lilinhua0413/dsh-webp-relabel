@@ -1,0 +1,37 @@
+{
+  "name": "dsh-webp-relabel",
+  "version": "1.0.0",
+  "description": "Relabels DSH's normalized WebP request images as PNG so local OpenAI-compatible vision servers accept them.",
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "cordis",
+    "webp",
+    "png",
+    "vision",
+    "image",
+    "multimodal",
+    "lm-studio",
+    "llama-cpp",
+    "openai-compatible"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": ["index.js", "cordis.patch.yml", "README.md"],
+  "engines": {
+    "node": ">=22.19"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.mjs\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilinhua0413/dsh-webp-relabel.git"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" }
+  }
+}

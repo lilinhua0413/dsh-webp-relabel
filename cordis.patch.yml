@@ -1,0 +1,15 @@
+# Self-contained bundle layer: installing this package is enough — this row
+# carries the plugin's defaults, including its config.
+#
+# Override any of them from your profile patch by targeting the same id:
+#
+#   - id: dsh-webp-relabel
+#     config:
+#       debug: false
+- insert:
+    - id: dsh-webp-relabel
+      name: 'dsh-webp-relabel'
+      config:
+        from: image/webp
+        to: image/png
+        debug: true
